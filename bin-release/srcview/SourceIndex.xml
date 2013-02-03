@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<index>
+	<title>DouBanTest 的源代码</title>
+	<nodes>
+		<node label="html-template">
+			<node label="history">
+				<node icon="cssIcon" label="history.css" url="source/html-template/history/history.css.html"/>
+				<node label="history.js" url="source/html-template/history/history.js.txt"/>
+				<node icon="htmlIcon" label="historyFrame.html" url="source/html-template/history/historyFrame.html"/>
+			</node>
+			<node icon="htmlIcon" label="index.template.html" url="source/html-template/index.template.html"/>
+			<node icon="swfIcon" label="playerProductInstall.swf" url="source/html-template/playerProductInstall.swf"/>
+			<node label="swfobject.js" url="source/html-template/swfobject.js.txt"/>
+		</node>
+		<node label="lib">
+			<node label="as3corelib.swc" url="source/lib/as3corelib.swc"/>
+		</node>
+		<node label="src">
+			<node icon="packageIcon" label="base" expanded="true">
+				<node icon="actionScriptIcon" label="AbsView.as" url="source/base/AbsView.as.html"/>
+				<node icon="actionScriptIcon" label="BaseFace.as" url="source/base/BaseFace.as.html"/>
+				<node icon="actionScriptIcon" label="BaseMcSprite.as" url="source/base/BaseMcSprite.as.html"/>
+			</node>
+			<node icon="packageIcon" label="container" expanded="true">
+				<node icon="actionScriptIcon" label="BooksItem.as" url="source/container/BooksItem.as.html"/>
+				<node icon="actionScriptIcon" label="BooksItemContainer.as" url="source/container/BooksItemContainer.as.html"/>
+			</node>
+			<node icon="packageIcon" label="lib.scroll" expanded="true">
+				<node icon="actionScriptIcon" label="ScrollView.as" url="source/lib/scroll/ScrollView.as.html"/>
+				<node icon="actionScriptIcon" label="ScrollViewContainer.as" url="source/lib/scroll/ScrollViewContainer.as.html"/>
+			</node>
+			<node icon="packageIcon" label="lib.tip" expanded="true">
+				<node icon="actionScriptIcon" label="BaseTipObj.as" url="source/lib/tip/BaseTipObj.as.html"/>
+				<node icon="actionScriptIcon" label="BaseTipViewer.as" url="source/lib/tip/BaseTipViewer.as.html"/>
+				<node icon="actionScriptIcon" label="TipBG.as" url="source/lib/tip/TipBG.as.html"/>
+				<node icon="actionScriptIcon" label="WordTipObj.as" url="source/lib/tip/WordTipObj.as.html"/>
+				<node icon="actionScriptIcon" label="WordTipViewer.as" url="source/lib/tip/WordTipViewer.as.html"/>
+			</node>
+			<node icon="packageIcon" label="mananger" expanded="true">
+				<node icon="actionScriptIcon" label="BaseTipManager.as" url="source/mananger/BaseTipManager.as.html"/>
+				<node icon="actionScriptIcon" label="TipManager.as" url="source/mananger/TipManager.as.html"/>
+			</node>
+			<node icon="packageIcon" label="object" expanded="true">
+				<node icon="actionScriptIcon" label="BookObj.as" url="source/object/BookObj.as.html"/>
+			</node>
+			<node icon="packageIcon" label="utils" expanded="true">
+				<node icon="actionScriptIcon" label="ForeKit.as" url="source/utils/ForeKit.as.html"/>
+				<node icon="actionScriptIcon" label="GlobalVar.as" url="source/utils/GlobalVar.as.html"/>
+			</node>
+			<node icon="actionScriptIcon" label="BookInfoPanel.as" url="source/BookInfoPanel.as.html"/>
+			<node icon="mxmlAppIcon" selected="true" label="DouBanTest.as" url="source/DouBanTest.as.html"/>
+			<node icon="actionScriptIcon" label="Global.as" url="source/Global.as.html"/>
+			<node icon="actionScriptIcon" label="MainPanle.as" url="source/MainPanle.as.html"/>
+		</node>
+		<node label="ui">
+			<node icon="flaIcon" label="douBan.fla" url="source/ui/douBan.fla"/>
+			<node icon="swfIcon" label="douBan.swf" url="source/ui/douBan.swf"/>
+		</node>
+	</nodes>
+	<zipfile label="下载源代码（ZIP，1535 KB）" url="DouBanTest.zip">
+	</zipfile>
+	<sdklink label="下载 Flex SDK" url="http://www.adobe.com/go/flex451_sdk_download_zh_CN">
+	</sdklink>
+</index>

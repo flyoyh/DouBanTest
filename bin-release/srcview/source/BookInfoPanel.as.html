@@ -1,0 +1,75 @@
+<!-- saved from url=(0014)about:internet -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>BookInfoPanel.as</title>
+<link rel="stylesheet" type="text/css" href="../SourceStyles.css"/>
+</head>
+
+<body><pre><span class="ActionScriptpackage">package</span>
+<span class="ActionScriptBracket/Brace">{</span>
+    <span class="ActionScriptReserved">import</span> <span class="ActionScriptDefault_Text">base</span><span class="ActionScriptOperator">.</span><span class="ActionScriptDefault_Text">BaseMcSprite</span>;
+    
+    <span class="ActionScriptReserved">import</span> <span class="ActionScriptDefault_Text">flash</span><span class="ActionScriptOperator">.</span><span class="ActionScriptDefault_Text">display</span><span class="ActionScriptOperator">.</span><span class="ActionScriptDefault_Text">MovieClip</span>;
+    <span class="ActionScriptReserved">import</span> <span class="ActionScriptDefault_Text">flash</span><span class="ActionScriptOperator">.</span><span class="ActionScriptDefault_Text">text</span><span class="ActionScriptOperator">.</span><span class="ActionScriptDefault_Text">TextField</span>;
+    
+    <span class="ActionScriptReserved">import</span> <span class="ActionScriptDefault_Text">object</span><span class="ActionScriptOperator">.</span><span class="ActionScriptDefault_Text">BookObj</span>;
+    
+    <span class="ActionScriptReserved">public</span> <span class="ActionScriptclass">class</span> <span class="ActionScriptDefault_Text">BookInfoPanel</span> <span class="ActionScriptReserved">extends</span> <span class="ActionScriptDefault_Text">BaseMcSprite</span>
+    <span class="ActionScriptBracket/Brace">{</span>
+        <span class="ActionScriptReserved">public</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">BookInfoPanel</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptDefault_Text">_mc</span>:<span class="ActionScriptDefault_Text">MovieClip</span><span class="ActionScriptBracket/Brace">)</span>
+        <span class="ActionScriptBracket/Brace">{</span>
+            <span class="ActionScriptReserved">super</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptDefault_Text">_mc</span><span class="ActionScriptBracket/Brace">)</span>;
+            <span class="ActionScriptDefault_Text">initUi</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptBracket/Brace">)</span>;
+            
+        <span class="ActionScriptBracket/Brace">}</span>
+        <span class="ActionScriptReserved">private</span> <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">txtName</span>:<span class="ActionScriptDefault_Text">TextField</span>;
+        <span class="ActionScriptReserved">private</span> <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">txtAuth</span>:<span class="ActionScriptDefault_Text">TextField</span>;
+        <span class="ActionScriptReserved">private</span> <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">txtPrice</span>:<span class="ActionScriptDefault_Text">TextField</span>;
+        <span class="ActionScriptReserved">private</span> <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">txtPublisher</span>:<span class="ActionScriptDefault_Text">TextField</span>;
+        <span class="ActionScriptReserved">private</span> <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">txtDesc</span>:<span class="ActionScriptDefault_Text">TextField</span>;
+        <span class="ActionScriptReserved">private</span> <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">txtDate</span>:<span class="ActionScriptDefault_Text">TextField</span>;
+        <span class="ActionScriptReserved">private</span> <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">txtTrans</span>:<span class="ActionScriptDefault_Text">TextField</span>;
+        <span class="ActionScriptReserved">private</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">initUi</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptBracket/Brace">)</span>:<span class="ActionScriptReserved">void</span>
+        <span class="ActionScriptBracket/Brace">{</span>
+            <span class="ActionScriptReserved">this</span><span class="ActionScriptOperator">.</span><span class="ActionScriptDefault_Text">mouseChildren</span><span class="ActionScriptOperator">=</span><span class="ActionScriptReserved">false</span>;
+            <span class="ActionScriptReserved">this</span><span class="ActionScriptOperator">.</span><span class="ActionScriptDefault_Text">mouseEnabled</span><span class="ActionScriptOperator">=</span><span class="ActionScriptReserved">false</span>;
+            
+            <span class="ActionScriptDefault_Text">txtName</span><span class="ActionScriptOperator">=</span><span class="ActionScriptDefault_Text">_bg</span><span class="ActionScriptBracket/Brace">[</span><span class="ActionScriptString">"txt0"</span><span class="ActionScriptBracket/Brace">]</span>;
+            <span class="ActionScriptDefault_Text">txtAuth</span><span class="ActionScriptOperator">=</span><span class="ActionScriptDefault_Text">_bg</span><span class="ActionScriptBracket/Brace">[</span><span class="ActionScriptString">"txt1"</span><span class="ActionScriptBracket/Brace">]</span>;
+            <span class="ActionScriptDefault_Text">txtPrice</span><span class="ActionScriptOperator">=</span><span class="ActionScriptDefault_Text">_bg</span><span class="ActionScriptBracket/Brace">[</span><span class="ActionScriptString">"txt2"</span><span class="ActionScriptBracket/Brace">]</span>;
+            <span class="ActionScriptDefault_Text">txtPublisher</span><span class="ActionScriptOperator">=</span><span class="ActionScriptDefault_Text">_bg</span><span class="ActionScriptBracket/Brace">[</span><span class="ActionScriptString">"txt3"</span><span class="ActionScriptBracket/Brace">]</span>;
+            <span class="ActionScriptDefault_Text">txtDate</span><span class="ActionScriptOperator">=</span><span class="ActionScriptDefault_Text">_bg</span><span class="ActionScriptBracket/Brace">[</span><span class="ActionScriptString">"txt4"</span><span class="ActionScriptBracket/Brace">]</span>;
+            <span class="ActionScriptDefault_Text">txtTrans</span><span class="ActionScriptOperator">=</span><span class="ActionScriptDefault_Text">_bg</span><span class="ActionScriptBracket/Brace">[</span><span class="ActionScriptString">"txt5"</span><span class="ActionScriptBracket/Brace">]</span>;
+            
+            <span class="ActionScriptDefault_Text">txtDesc</span><span class="ActionScriptOperator">=</span><span class="ActionScriptDefault_Text">_bg</span><span class="ActionScriptBracket/Brace">[</span><span class="ActionScriptString">"txt6"</span><span class="ActionScriptBracket/Brace">]</span>;
+            <span class="ActionScriptDefault_Text">txtDesc</span><span class="ActionScriptOperator">.</span><span class="ActionScriptDefault_Text">multiline</span><span class="ActionScriptOperator">=</span><span class="ActionScriptReserved">true</span>;
+            <span class="ActionScriptDefault_Text">txtDesc</span><span class="ActionScriptOperator">.</span><span class="ActionScriptDefault_Text">wordWrap</span><span class="ActionScriptOperator">=</span><span class="ActionScriptReserved">true</span>;
+        <span class="ActionScriptBracket/Brace">}</span>
+        <span class="ActionScriptReserved">private</span> <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">book</span>:<span class="ActionScriptDefault_Text">BookObj</span>;
+        <span class="ActionScriptReserved">public</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">showBook</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptDefault_Text">obj</span>:<span class="ActionScriptDefault_Text">BookObj</span><span class="ActionScriptBracket/Brace">)</span>:<span class="ActionScriptReserved">void</span>
+        <span class="ActionScriptBracket/Brace">{</span>
+            <span class="ActionScriptDefault_Text">book</span><span class="ActionScriptOperator">=</span><span class="ActionScriptDefault_Text">obj</span>;
+            <span class="ActionScriptDefault_Text">reset</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptBracket/Brace">)</span>;
+            <span class="ActionScriptDefault_Text">txtName</span><span class="ActionScriptOperator">.</span><span class="ActionScriptDefault_Text">text</span><span class="ActionScriptOperator">=</span><span class="ActionScriptString">"书名："</span><span class="ActionScriptOperator">+</span><span class="ActionScriptDefault_Text">book</span><span class="ActionScriptOperator">.</span><span class="ActionScriptDefault_Text">name</span>;
+            <span class="ActionScriptDefault_Text">txtAuth</span><span class="ActionScriptOperator">.</span><span class="ActionScriptDefault_Text">text</span><span class="ActionScriptOperator">=</span><span class="ActionScriptString">"作者："</span><span class="ActionScriptOperator">+</span><span class="ActionScriptDefault_Text">book</span><span class="ActionScriptOperator">.</span><span class="ActionScriptDefault_Text">auther</span>;
+            <span class="ActionScriptDefault_Text">txtTrans</span><span class="ActionScriptOperator">.</span><span class="ActionScriptDefault_Text">text</span><span class="ActionScriptOperator">=</span><span class="ActionScriptString">"译者："</span><span class="ActionScriptOperator">+</span><span class="ActionScriptDefault_Text">book</span><span class="ActionScriptOperator">.</span><span class="ActionScriptDefault_Text">traner</span>;
+            <span class="ActionScriptDefault_Text">txtDate</span><span class="ActionScriptOperator">.</span><span class="ActionScriptDefault_Text">text</span><span class="ActionScriptOperator">=</span><span class="ActionScriptString">"出版日期："</span><span class="ActionScriptOperator">+</span><span class="ActionScriptDefault_Text">book</span><span class="ActionScriptOperator">.</span><span class="ActionScriptDefault_Text">publishDate</span>;
+            <span class="ActionScriptDefault_Text">txtPublisher</span><span class="ActionScriptOperator">.</span><span class="ActionScriptDefault_Text">text</span><span class="ActionScriptOperator">=</span><span class="ActionScriptString">"出版社："</span><span class="ActionScriptOperator">+</span><span class="ActionScriptDefault_Text">book</span><span class="ActionScriptOperator">.</span><span class="ActionScriptDefault_Text">publisher</span>;
+            <span class="ActionScriptDefault_Text">txtPrice</span><span class="ActionScriptOperator">.</span><span class="ActionScriptDefault_Text">text</span><span class="ActionScriptOperator">=</span><span class="ActionScriptString">"价格："</span><span class="ActionScriptOperator">+</span><span class="ActionScriptDefault_Text">book</span><span class="ActionScriptOperator">.</span><span class="ActionScriptDefault_Text">price</span>;
+            <span class="ActionScriptDefault_Text">txtDesc</span><span class="ActionScriptOperator">.</span><span class="ActionScriptDefault_Text">text</span><span class="ActionScriptOperator">=</span><span class="ActionScriptString">"简介："</span><span class="ActionScriptOperator">+</span><span class="ActionScriptDefault_Text">book</span><span class="ActionScriptOperator">.</span><span class="ActionScriptDefault_Text">content</span>;
+        <span class="ActionScriptBracket/Brace">}</span>
+        <span class="ActionScriptReserved">public</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">reset</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptBracket/Brace">)</span>:<span class="ActionScriptReserved">void</span>
+        <span class="ActionScriptBracket/Brace">{</span>
+            <span class="ActionScriptDefault_Text">txtName</span><span class="ActionScriptOperator">.</span><span class="ActionScriptDefault_Text">text</span><span class="ActionScriptOperator">=</span><span class="ActionScriptString">""</span>;
+            <span class="ActionScriptDefault_Text">txtAuth</span><span class="ActionScriptOperator">.</span><span class="ActionScriptDefault_Text">text</span><span class="ActionScriptOperator">=</span><span class="ActionScriptString">""</span>;
+            <span class="ActionScriptDefault_Text">txtPrice</span><span class="ActionScriptOperator">.</span><span class="ActionScriptDefault_Text">text</span><span class="ActionScriptOperator">=</span><span class="ActionScriptString">""</span>;
+            <span class="ActionScriptDefault_Text">txtPublisher</span><span class="ActionScriptOperator">.</span><span class="ActionScriptDefault_Text">text</span><span class="ActionScriptOperator">=</span><span class="ActionScriptString">""</span>;
+            <span class="ActionScriptDefault_Text">txtDesc</span><span class="ActionScriptOperator">.</span><span class="ActionScriptDefault_Text">text</span><span class="ActionScriptOperator">=</span><span class="ActionScriptString">""</span>;
+            <span class="ActionScriptDefault_Text">txtDate</span><span class="ActionScriptOperator">.</span><span class="ActionScriptDefault_Text">text</span><span class="ActionScriptOperator">=</span><span class="ActionScriptString">""</span>;
+            <span class="ActionScriptDefault_Text">txtTrans</span><span class="ActionScriptOperator">.</span><span class="ActionScriptDefault_Text">text</span><span class="ActionScriptOperator">=</span><span class="ActionScriptString">""</span>;
+        <span class="ActionScriptBracket/Brace">}</span>
+    <span class="ActionScriptBracket/Brace">}</span>
+<span class="ActionScriptBracket/Brace">}</span></pre></body>
+</html>
